@@ -19,7 +19,7 @@ st.markdown("Predict bike demand and analyze historical rental trends")
 # -----------------------------------
 # LOAD MODEL
 # -----------------------------------
-model = pickle.load(open("pipeline.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
 
 # -----------------------------------
 # LOAD DATASET
