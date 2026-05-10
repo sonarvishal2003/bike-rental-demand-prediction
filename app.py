@@ -26,6 +26,16 @@ model = pickle.load(open("model.pkl", "rb"))
 # -----------------------------------
 df = pd.read_csv("Dataset.csv")
 
+# Replace ? values
+df.replace('?', np.nan, inplace=True)
+
+# Drop missing rows in important columns
+df.dropna(subset=[
+    'season',
+    'weathersit',
+    'workingday'
+], inplace=True)
+
 # -----------------------------------
 # SIDEBAR INPUTS
 # -----------------------------------
